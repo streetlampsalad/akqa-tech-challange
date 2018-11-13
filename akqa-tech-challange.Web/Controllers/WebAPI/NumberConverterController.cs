@@ -8,8 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 
 namespace akqa_tech_challange.WebAPI.Controllers
-{    
-    [Route("api/converter")]
+{        
     public class NumberConverterController : ApiController
     {
         [HttpGet, HttpPut, HttpDelete]
@@ -27,7 +26,7 @@ namespace akqa_tech_challange.WebAPI.Controllers
             }
 
             var response = body;
-            response.currencyConverted = NumberConverterService.CurrencyToWords(body.currencyInput);
+            response.currencyConverted = NumberConverterService.CurrencyToWords(body.currency);
             return Ok(response);
         }        
     }

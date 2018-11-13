@@ -17,14 +17,14 @@ namespace akqa_tech_challange.Controllers.Tests
             var body = new CurrencyToWordModel()
             {
                 name = "John Smith",
-                currencyInput = 123.45M
+                currency = 123.45M
             };
 
             var result = controller.CurrencyToWords(body) as OkNegotiatedContentResult<CurrencyToWordModel>;            
 
             Assert.IsNotNull(result);            
             Assert.AreEqual("John Smith", result.Content.name);
-            Assert.AreEqual(123.45M, result.Content.currencyInput);
+            Assert.AreEqual(123.45M, result.Content.currency);
             Assert.AreEqual("ONE HUNDRED AND TWENTY - THREE DOLLARS AND FORTY - FIVE CENTS", result.Content.currencyConverted.ToUpper());
         }
 
@@ -45,7 +45,7 @@ namespace akqa_tech_challange.Controllers.Tests
             var controller = new NumberConverterController();
             var body = new CurrencyToWordModel()
             {                
-                currencyInput = 123.45M
+                currency = 123.45M
             };
 
             var result = controller.CurrencyToWords(body) as NegotiatedContentResult<string>;
@@ -67,7 +67,7 @@ namespace akqa_tech_challange.Controllers.Tests
 
             Assert.IsNotNull(result);
             Assert.AreEqual("John Smith", result.Content.name);
-            Assert.AreEqual(0M, result.Content.currencyInput);
+            Assert.AreEqual(0M, result.Content.currency);
             Assert.AreEqual("ZERO DOLLARS AND ZERO CENTS", result.Content.currencyConverted.ToUpper());
         }
     }

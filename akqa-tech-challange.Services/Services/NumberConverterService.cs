@@ -26,7 +26,7 @@ namespace akqa_tech_challange.Services
                 throw new Exception("Input is greater then int32, please input a number less then 2,147,483,647");
             }
 
-            if(decimal.Round(currency, 3) != currency)
+            if(decimal.Round(currency, 2) != currency)
             {
                 throw new Exception("Input must be a valid currency and can only be 2 decimal places");
             }

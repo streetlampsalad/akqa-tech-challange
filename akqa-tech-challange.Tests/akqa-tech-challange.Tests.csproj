@@ -69,9 +69,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\akqa-tech-challange\akqa-tech-challange.csproj">
+    <ProjectReference Include="..\akqa-tech-challange.Models\akqa-tech-challange.Models.csproj">
+      <Project>{ac3981a4-958c-4a46-920d-a89dc336f857}</Project>
+      <Name>akqa-tech-challange.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\akqa-tech-challange.Services\akqa-tech-challange.Services.csproj">
+      <Project>{c68992e5-cd5d-4248-b4fa-d1fc784c88b0}</Project>
+      <Name>akqa-tech-challange.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\akqa-tech-challange\akqa-tech-challange.Web.csproj">
       <Project>{779ED468-2B00-4126-9A78-6193A502ECC6}</Project>
-      <Name>akqa-tech-challange</Name>
+      <Name>akqa-tech-challange.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

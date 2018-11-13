@@ -7,7 +7,7 @@ namespace akqa_tech_challange.Services
 {
     public class NumberConverterService
     {
-        // Logic based of https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
+        // Logic based off https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
         public static string CurrencyToWords(decimal currency)
         {
             if(currency == 0)
@@ -68,7 +68,7 @@ namespace akqa_tech_challange.Services
             return words;
         }
 
-        // Logic based of https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
+        // Logic based off https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
         public static string NumberToWords(int number)
         {
             if(number == 0)

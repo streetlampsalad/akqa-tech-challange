@@ -5,7 +5,7 @@ using System.Web;
 
 namespace akqa_tech_challange.Services
 {
-    public class NumberConverter
+    public class NumberConverterService
     {
         // Logic based of https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
         public static string CurrencyToWords(decimal currency)

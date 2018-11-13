@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace akqa_tech_challange.WebAPI.Controllers
 {    
+    [Route("api/converter")]
     public class NumberConverterController : ApiController
     {
         [HttpGet, HttpPut, HttpDelete]

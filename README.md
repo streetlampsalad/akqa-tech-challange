@@ -15,17 +15,19 @@ The number converter a few open source projects to work properly:
 
 Some technologies I would use if I were to make this a production ready app.
 
-* [Dependency Injection] - To make it easier to referance the different services
+* [Dependency Injection] - To make it easier to reference the different services
 * [nUnit] - I felt MSTest was fine for this PoC but I would want to switch to nUnit for better exception handling tests
 * [Moq] - Just so I can mock the DI interfaces and also mock requests for better API testing
 * [MVM Framework] - I chose not to implement an MVM framework just out of time requirements but I would definitely implement one if I was to keep building on this app (probably angularJS) 
-* [Webpack/Gulp] - Just so I can use sass for the stlying and also implement a build watcher
-* [Mongo DB/Data store] - I would move all the names of the numbers into a data store so their is a more common location to access all the strings and also enable the ability to add support for multiple languages
-* [Security] - Protect the API call with a client_id and client_secret which could be encrypted into a cookie on the users browser
+* [Webpack/Gulp] - Just so I can use sass for the styling and also implement a build watcher
+* [Mongo DB/Data store] - I would move all the names of the numbers into a data store so there is a more common location to access all the strings and also enable the ability to add support for multiple languages
+* [Security] - Protect the API call with a client_id and client_secret which could be encrypted into a cookie on the user's browser
+* [Feature Toggles] - So I could add toggles around component so I could roll forward and disable functionality in production is something stopped working
+* [Branching Strategy] - With feature toggles, we could do trunk based development because every commit would be releasable but GitFlow is also a good strategy
 
 
 ### Installation
 
-1. Make sure akqa-tech-challange.Web is set to the start up project
+1. Make sure akqa-tech-challange.Web is set to the startup project
 2. Build the solution so NuGet can download the required packages
 3. Press F5 and run the project using visual studios debugger and IIS Express

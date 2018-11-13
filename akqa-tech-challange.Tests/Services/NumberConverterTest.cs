@@ -89,6 +89,16 @@ namespace akqa_tech_challange.Services.Tests
         }
 
         [TestMethod]
+        public void CurrencyToWords_Max()
+        {
+            var testInput = 2147483647M;
+            var result = NumberConverter.CurrencyToWords(testInput);
+            Assert.IsNotNull(result);
+            Assert.AreNotEqual("", result);
+            Assert.AreEqual("TWO THOUSAND ONE HUNDRED AND FORTY - SEVEN MILLION FOUR HUNDRED AND EIGHTY - THREE THOUSAND SIX HUNDRED AND FORTY - SEVEN DOLLARS", result.ToUpper());
+        }
+
+        [TestMethod]
         public void CurrencyToWords_GreaterThenInt32Exception()
         {
             var testInput = 123000000000.45M;
@@ -190,6 +200,16 @@ namespace akqa_tech_challange.Services.Tests
             Assert.IsNotNull(result);
             Assert.AreNotEqual("", result);
             Assert.AreEqual("ONE HUNDRED AND TWENTY - THREE MILLION FOUR HUNDRED AND FIFTY - SIX THOUSAND SEVEN HUNDRED AND EIGHTY - NINE", result.ToUpper());
+        }
+
+        [TestMethod]
+        public void NumberToWords_Max()
+        {
+            var testInput = 2147483647;
+            var result = NumberConverter.NumberToWords(testInput);
+            Assert.IsNotNull(result);
+            Assert.AreNotEqual("", result);
+            Assert.AreEqual("TWO THOUSAND ONE HUNDRED AND FORTY - SEVEN MILLION FOUR HUNDRED AND EIGHTY - THREE THOUSAND SIX HUNDRED AND FORTY - SEVEN", result.ToUpper());
         }
 
         [TestMethod]

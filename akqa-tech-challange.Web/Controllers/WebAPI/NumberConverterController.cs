@@ -1,14 +1,10 @@
-﻿using akqa_tech_challange.WebAPI.Models;
-using akqa_tech_challange.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Net;
 using System.Web.Http;
+using akqa_tech_challange.Models.NumberConverter.WebAPI;
+using akqa_tech_challange.Services.NumberConverter;
 
-namespace akqa_tech_challange.WebAPI.Controllers
-{        
+namespace akqa_tech_challange.Web.Controllers.WebAPI
+{
     public class NumberConverterController : ApiController
     {
         [HttpGet, HttpPut, HttpDelete]

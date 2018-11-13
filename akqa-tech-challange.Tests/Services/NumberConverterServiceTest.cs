@@ -1,7 +1,8 @@
 ﻿using System;
+using akqa_tech_challange.Services.NumberConverter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace akqa_tech_challange.Services.Tests
+namespace akqa_tech_challange.Tests.Services
 {
     [TestClass]
     public class NumberConverterServiceTest

@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\NumberConverterService.cs" />
+    <Compile Include="NumberConverter\NumberConverterService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\akqa-tech-challange.Models\akqa-tech-challange.Models.csproj">

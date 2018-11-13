@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net;
 using System.Web.Http.Results;
-using akqa_tech_challange.WebAPI.Controllers;
-using akqa_tech_challange.WebAPI.Models;
+using akqa_tech_challange.Models.NumberConverter.WebAPI;
+using akqa_tech_challange.Web.Controllers.WebAPI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace akqa_tech_challange.Controllers.Tests
+namespace akqa_tech_challange.Tests.Controllers
 {
     [TestClass]
     public class NumberConverterControllerTest

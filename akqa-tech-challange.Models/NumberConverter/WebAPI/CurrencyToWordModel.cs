@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace akqa_tech_challange.WebAPI.Models
+namespace akqa_tech_challange.Models.NumberConverter.WebAPI
 {
     public class CurrencyToWordModel
     {        

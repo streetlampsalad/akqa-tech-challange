@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace akqa_tech_challange.Services
+namespace akqa_tech_challange.Services.NumberConverter
 {
     public class NumberConverterService
     {
@@ -69,6 +69,7 @@ namespace akqa_tech_challange.Services
         }
 
         // Logic based off https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
+        // Left this public as I am testing this function directly because it should be able to be called by other functions or APIs in the future
         public static string NumberToWords(int number)
         {
             if(number == 0)

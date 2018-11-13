@@ -3,7 +3,9 @@
         event.preventDefault();
 
         var name = $('#name').val();
-        var currency = $('#currency').val();
+        // Regex removes all special characters
+        var currency = $('#currency').val().replace(/[&\/\\#,+()$~%'":*?<>{}]/g, '');
+        console.log(currency);
 
         if (isNaN(currency)) {
             updateResponse("Invalid currency", "", "");                            
@@ -29,6 +31,7 @@
     });
 });
 
+// Simple function that refreshes the response details
 function updateResponse(error, name, currencyConverted) {
     $('.form-response').fadeOut(function () {
         $('.form-response-error').html(error);

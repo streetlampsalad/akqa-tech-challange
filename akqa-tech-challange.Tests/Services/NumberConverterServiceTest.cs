@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace akqa_tech_challange.Services.Tests
 {
     [TestClass]
-    public class NumberConverterTest
+    public class NumberConverterServiceTest
     {
         #region CurrencyToWords
 

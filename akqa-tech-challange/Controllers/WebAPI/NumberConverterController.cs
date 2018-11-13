@@ -11,18 +11,23 @@ namespace akqa_tech_challange.WebAPI.Controllers
 {    
     public class NumberConverterController : ApiController
     {
-        [HttpGet]
-        public HttpResponseMessage CurrencyToWord()
-        {
-            return Request.CreateResponse(HttpStatusCode.NotImplemented);
+        [HttpGet, HttpPut, HttpDelete]
+        public IHttpActionResult CurrencyToWords()
+        {            
+            return Content(HttpStatusCode.NotImplemented, "Not Implemented");
         }
 
         [HttpPost]
-        public IHttpActionResult CurrencyToWord(CurrencyToWordModel body)
+        public IHttpActionResult CurrencyToWords(CurrencyToWordModel body)
         {
+            if(string.IsNullOrWhiteSpace(body.name))
+            {
+                return Content(HttpStatusCode.BadRequest, "Please input a name");
+            }
+
             var response = body;
             response.currencyConverted = NumberConverterService.CurrencyToWords(body.currencyInput);
             return Ok(response);
-        }
+        }        
     }
 }

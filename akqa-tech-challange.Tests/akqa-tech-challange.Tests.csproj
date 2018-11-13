@@ -77,8 +77,8 @@
       <Project>{c68992e5-cd5d-4248-b4fa-d1fc784c88b0}</Project>
       <Name>akqa-tech-challange.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\akqa-tech-challange\akqa-tech-challange.Web.csproj">
-      <Project>{779ED468-2B00-4126-9A78-6193A502ECC6}</Project>
+    <ProjectReference Include="..\akqa-tech-challange.Web\akqa-tech-challange.Web.csproj">
+      <Project>{779ed468-2b00-4126-9a78-6193a502ecc6}</Project>
       <Name>akqa-tech-challange.Web</Name>
     </ProjectReference>
   </ItemGroup>

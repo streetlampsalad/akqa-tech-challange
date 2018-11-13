@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "akqa-tech-challange.Web", "akqa-tech-challange\akqa-tech-challange.Web.csproj", "{779ED468-2B00-4126-9A78-6193A502ECC6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "akqa-tech-challange.Tests", "akqa-tech-challange.Tests\akqa-tech-challange.Tests.csproj", "{AEB4F867-F80F-42C1-A899-00172F4580BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "akqa-tech-challange.Services", "akqa-tech-challange.Services\akqa-tech-challange.Services.csproj", "{C68992E5-CD5D-4248-B4FA-D1FC784C88B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "akqa-tech-challange.Models", "akqa-tech-challange.Models\akqa-tech-challange.Models.csproj", "{AC3981A4-958C-4A46-920D-A89DC336F857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "akqa-tech-challange.Web", "akqa-tech-challange.Web\akqa-tech-challange.Web.csproj", "{779ED468-2B00-4126-9A78-6193A502ECC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{779ED468-2B00-4126-9A78-6193A502ECC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{779ED468-2B00-4126-9A78-6193A502ECC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{779ED468-2B00-4126-9A78-6193A502ECC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{779ED468-2B00-4126-9A78-6193A502ECC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AEB4F867-F80F-42C1-A899-00172F4580BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEB4F867-F80F-42C1-A899-00172F4580BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEB4F867-F80F-42C1-A899-00172F4580BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{AC3981A4-958C-4A46-920D-A89DC336F857}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC3981A4-958C-4A46-920D-A89DC336F857}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC3981A4-958C-4A46-920D-A89DC336F857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779ED468-2B00-4126-9A78-6193A502ECC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779ED468-2B00-4126-9A78-6193A502ECC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779ED468-2B00-4126-9A78-6193A502ECC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779ED468-2B00-4126-9A78-6193A502ECC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

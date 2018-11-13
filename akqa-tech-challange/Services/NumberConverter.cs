@@ -1,0 +1,123 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace akqa_tech_challange.Services
+{
+    public class NumberConverter
+    {
+        //Logic based of https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
+        public static string CurrencyToWords(decimal currency)
+        {
+            if(currency == 0)
+            {
+                return "zero dollars and zero cents";
+            }                
+
+            if(currency < 0)
+            {
+                return "negative " + CurrencyToWords(Math.Abs(currency));
+            }                
+            
+            if(currency > int.MaxValue)
+            {
+                throw new Exception("Input is greater then int32, please input a number less then 2,147,483,647");
+            }
+
+            if(decimal.Round(currency, 3) != currency)
+            {
+                throw new Exception("Input must be a valid currency and can only be 2 decimal places");
+            }
+
+            string words = "";
+
+            int intPortion = (int)currency;
+            decimal fraction = (currency - intPortion) * 100;
+            int decPortion = (int)fraction;
+
+            var intPortionWords = NumberToWords(intPortion).TrimEnd(' ');            
+            
+            if(intPortionWords == "one")
+            {
+                words += intPortionWords + " dollar";
+            }
+            else
+            {
+                words += intPortionWords + " dollars";
+            }
+
+            if(decPortion > 0)
+            {
+                words += " and ";
+                var decPortionWords = NumberToWords(decPortion).TrimEnd(' ');
+                if(decPortionWords == "one")
+                {
+                    words += decPortionWords + " cent";
+                }
+                else
+                {
+                    words += decPortionWords + " cents";
+                }
+            }            
+
+            return words;
+        }
+
+        //Logic based of https://stackoverflow.com/questions/2729752/converting-numbers-in-to-words-c-sharp
+        public static string NumberToWords(int number)
+        {
+            if(number == 0)
+            {
+                return "zero";
+            }
+
+            if(number < 0)
+            {
+                return "negative " + NumberToWords(Math.Abs(number));
+            }
+
+            string words = "";
+
+            if((number / 1000000) > 0)
+            {
+                words += NumberToWords(number / 1000000) + " million ";
+                number %= 1000000;
+            }
+
+            if((number / 1000) > 0)
+            {
+                words += NumberToWords(number / 1000) + " thousand ";
+                number %= 1000;
+            }
+
+            if((number / 100) > 0)
+            {
+                words += NumberToWords(number / 100) + " hundred ";
+                number %= 100;
+            }
+
+            if(number > 0)
+            {
+                if(words != "")
+                    words += "and ";
+
+                var unitsMap = new[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+                var tensMap = new[] { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+
+                if(number < 20)
+                    words += unitsMap[number];
+                else
+                {
+                    words += tensMap[number / 10];
+                    if((number % 10) > 0)
+                        words += " - " + unitsMap[number % 10];
+                }
+            }
+
+            words = words.TrimEnd(' ');
+
+            return words;
+        }        
+    }
+}
